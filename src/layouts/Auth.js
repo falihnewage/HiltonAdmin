@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes , Route } from "react-router-dom";
 // react-bootstrap components
 import {
   Badge,
@@ -43,7 +43,7 @@ function Auth() {
         {/* Navbar */}
         <AuthNavbar />
         {/* End Navbar */}
-        <Switch>{getRoutes(routes)}</Switch>
+        <Routes >{getRoutes(routes)}</Routes >
         <AuthFooter />
       </div>
       <FixedPlugin />

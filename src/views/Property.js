@@ -1,8 +1,8 @@
 import { message, Popconfirm } from 'antd';
 import React, { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate , useParams } from "react-router-dom";
 import axios from '../Axios';
-// import { useHistory } from "react-router-dom";
+// import { useNavigate  } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // react-bootstrap components
 import {
@@ -14,7 +14,7 @@ import {
 
 // core components
 import Cookies from "js-cookie";
-// const history =useHistory()
+// const history =useNavigate ()
 // import { Navigate } from "react-big-calendar";
 import { Table } from 'antd';
 import { useDispatch } from "react-redux";
@@ -30,10 +30,10 @@ function ReactTables() {
   const [refetch, setrefetch] = useState(false)
   const [Loading, setLoading] = useState(false)
   const [numberOfPages, setnumberOfPages] = useState(1)
-  const navigate = useHistory();
+  const navigate = useNavigate ();
   const token = getToken()
   const dispatch = useDispatch()
-  const history = useHistory()
+  const history = useNavigate ()
   const [sort, setsort] = useState(null)
   const { id } = useParams();
   const [page, setpage] = useState(id == ':id' ? 0 : id - 1)

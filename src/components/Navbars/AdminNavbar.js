@@ -4,12 +4,12 @@ import React from "react";
 import {
   Button, Container, Nav, Navbar
 } from "react-bootstrap";
-import { useHistory } from "react-router";
+import { useNavigate  } from "react-router";
 import NavDropDown from "views/Pages/NavbarDropdown";
 
 function AdminNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const navigate = useHistory();
+  const navigate = useNavigate ();
  
   return (
     <>

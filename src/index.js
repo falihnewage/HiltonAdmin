@@ -1,7 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route,  Navigate } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,15 +32,15 @@ root.render(
     <BrowserRouter>
 
     <Provider store={store} >
-       <Switch>
+      
 
 
 
 
         {token ? <Route path="/admin" render={(props) => <AdminLayout {...props} />} /> : <Route path="/auth" render={(props) => <AuthLayout {...props} />} />}
-        {token ? <Redirect from="/" to="/admin/dashboard" /> : <Redirect from="/" to="/auth/login-page" />}
+        {token ? <Navigate from="/" to="/admin/dashboard" /> : <Navigate from="/" to="/auth/login-page" />}
 
-      </Switch>
+     
 
      </Provider>
   </BrowserRouter>,

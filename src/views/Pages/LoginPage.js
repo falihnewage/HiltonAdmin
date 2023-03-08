@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useDispatch } from "react-redux/es/exports";
 import axios from '../../Axios';
-// import { useHistory } from "react-router";
-import { useHistory } from "react-router-dom";
+// import { useNavigate  } from "react-router";
+import { useNavigate  } from "react-router-dom";
 // react-bootstrap components
 import { message } from "antd";
 import {
@@ -20,7 +20,7 @@ const LoginPage = () => {
   const [loading, setloading] = useState(false)
   const [token, settoken] = useState(false)
   const dispatch = useDispatch()
-  const navigate = useHistory()
+  const navigate = useNavigate ()
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const onSubmit = async (data) => {
     // navigate.push('/admin/dashboard')

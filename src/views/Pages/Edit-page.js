@@ -3,7 +3,7 @@ import axios from '../../Axios'
 import { Label } from "reactstrap";
 import Cookies from "js-cookie";
 import { useForm } from 'react-hook-form';
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate , useParams } from "react-router-dom";
 
 import {
   Badge,
@@ -24,7 +24,7 @@ import { Alert, message } from "antd";
 
 const Editpage = () => {
   const [property, setproperty] = useState()
-  const navigate = useHistory();
+  const navigate = useNavigate ();
   const { id } = useParams();
   const { type } = useParams();
   // console.log(type);

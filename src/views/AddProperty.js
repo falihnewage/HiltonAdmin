@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate , useParams } from "react-router-dom";
 import axios from '../Axios';
 
 import { Alert, message } from "antd";
@@ -13,7 +13,7 @@ import { getUid } from "utils/utils";
 
 function AddProperty() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
-  const navigate = useHistory();
+  const navigate = useNavigate ();
   const user_id=getUid()
   const { id } = useParams();
   const onSubmit = async (data) => {
