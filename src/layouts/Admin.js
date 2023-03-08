@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // react-bootstrap components
 import {
   Badge,
@@ -62,7 +62,7 @@ function Admin() {
         <div className="main-panel">
           <AdminNavbar />
           <div className="content">
-            <Switch>{getRoutes(routes)}</Switch>
+            <Routes>{getRoutes(routes)}</Routes>
           </div>
           <AdminFooter />
           <div
